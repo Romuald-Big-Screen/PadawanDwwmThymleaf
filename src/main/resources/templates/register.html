@@ -22,27 +22,27 @@
         <div id="addUser">
             <h4 class="logo">Pay My Budy</h4>
             </br>
-            <form action="#" th:action="@{/registration}"  th:object="${registrationForm}" method="post">
+            <form th:action="@{/registration}" th:object="${registrationForm}" method="post">
 
                 <h1 class="h3 mb-3 fw-normal">Register</h1>
                 <div class="form-floating">
-                    <input path="firstName" type="text" class="form-control floatingInput" />
+                    <input th:field="*{firstName}" type="text" class="form-control floatingInput" />
                     <label for="floatingInput">First Name</label>
                 </div>
                 <div class="form-floating">
-                    <input path="lastName" type="text" class="form-control floatingInput" />
+                    <input th:field="*{lastName}" type="text" class="form-control floatingInput" />
                     <label for="floatingInput">Last Name</label>
                 </div>
                 <div class="form-floating">
-                    <input path="email" type="email" class="form-control floatingInput" />
+                    <input th:field="*{email}" type="email" class="form-control floatingInput" />
                     <label for="floatingInput">Email address</label>
                 </div>
                 <div class="form-floating">
-                    <input path="password" type="password" class="form-control floatingPassword" />
+                    <input th:field="*{password}" type="password" class="form-control floatingPassword" />
                     <label for="floatingPassword">Password</label>
                 </div>
                 <div class="form-floating">
-                    <input path="confirmPassword" type="password" class="form-control floatingPassword" />
+                    <input th:field="*{confirmPassword}" type="password" class="form-control floatingPassword" />
                     <label for="floatingPassword">Confirm Password</label>
                 </div>
 
